@@ -1,0 +1,42 @@
+{
+  "name": "ghdl-cli",
+  "version": "1.0.0",
+  "description": "download github repo code only",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "rollup -w -c rollup.config.ts --configPlugin rollup-plugin-typescript2",
+    "build": "rimraf dist ts-dist && rollup -c rollup.config.ts --configPlugin rollup-plugin-typescript2",
+    "test": "vitest"
+  },
+  "bin": {
+    "ghdl": "./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.3",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/adm-zip": "^0.5.7",
+    "@types/node": "^22.13.10",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.35.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "vitest": "^3.0.8"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "axios": "^1.8.3",
+    "typescript": "^5.8.2"
+  }
+}

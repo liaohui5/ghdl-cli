@@ -1,0 +1,21 @@
+# EditorConfig: https://editorconfig.org
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+[*.{ts,js,json}]
+indent_size = 2
+
+[*.py]
+indent_size = 4
+
+[Makefile]
+indent_style = tab
+
+[{package.json,.travis.yml}]
+indent_size = 2
+
