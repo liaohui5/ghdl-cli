@@ -14,6 +14,7 @@ describe("help", () => {
       Options:
         -h, --help            show help
         -c, --cache           cache download files
+        -f, --force           force download ignore caches
         -b, --branch [branch] branch (default main)
       "
     `);

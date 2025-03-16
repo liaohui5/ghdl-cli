@@ -31,6 +31,7 @@ export function generateHelpLines() {
   const flagMap = {
     "-h, --help            ": "show help",
     "-c, --cache           ": "cache download files",
+    "-f, --force           ": "force download ignore caches",
     "-b, --branch [branch] ": "branch (default main)",
   };
   for (const [flag, description] of Object.entries(flagMap)) {
