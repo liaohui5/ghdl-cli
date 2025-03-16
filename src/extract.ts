@@ -17,5 +17,4 @@ export function extract(filePath: string) {
 
   fs.mkdirSync(targetPath, { recursive: true });
   zip.extractAllTo(".");
-  fs.unlinkSync(filePath);
 }

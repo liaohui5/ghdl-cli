@@ -2,7 +2,7 @@ export interface ParsedArgs {
   url: string;
   branch?: string;
   cache?: boolean;
-  tag?: string;
+  force?: boolean;
 }
 
 export const defaultOptions = {
@@ -55,6 +55,10 @@ export function parseArgs(args: Array<string> = []): ParsedArgs {
 
     if (option === "-c" || option === "--cache") {
       parsedOptions.cache = true;
+    }
+
+    if (option === "-f" || option === "--force") {
+      parsedOptions.force = true;
     }
   }
 

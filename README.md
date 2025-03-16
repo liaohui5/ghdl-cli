@@ -17,6 +17,6 @@ ghdl https://github.com/vuejs/core -b vapor
 
 ## ToDo
 
-- [ ] 实现下载功能
-- [ ] 实现缓存功能
+- [x] 实现下载功能
+- [x] 实现缓存功能
 - [x] 配置 semantic-release 自动发布到 npm 仓库
