@@ -1,5 +1,5 @@
 {
-  "name": "ghdl-cli",
+  "name": "ghdl-cli-for-liaohui5",
   "version": "0.0.1",
   "description": "fast download github code repo",
   "main": "dist/index.js",
