@@ -5,14 +5,14 @@
 ## 安装
 
 ```sh
-npm install -g ghdl
+npm i ghdl-cli-for-liaohui5
 ```
 
 ## 使用
 
 ```sh
-ghdl vuejs/core
-ghdl https://github.com/vuejs/core -b vapor
+ghdl vuejs/core -b main
+ghdl https://github.com/vuejs/core -b vapor --cache
 ```
 
 ## ToDo
