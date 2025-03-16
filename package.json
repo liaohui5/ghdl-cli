@@ -1,20 +1,30 @@
 {
   "name": "ghdl-cli",
-  "version": "1.0.0",
-  "description": "download github repo code only",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "fast download github code repo",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "dev": "rollup -w -c rollup.config.ts --configPlugin rollup-plugin-typescript2",
     "build": "rimraf dist ts-dist && rollup -c rollup.config.ts --configPlugin rollup-plugin-typescript2",
-    "test": "vitest"
+    "test": "vitest",
+    "release": "semantic-release --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaohui5/ghdl-cli.git"
   },
   "bin": {
     "ghdl": "./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "download",
+    "github",
+    "node.js",
+    "cli"
+  ],
+  "author": "liiaohui5 secretx500@gmail.com",
+  "license": "MIT",
   "packageManager": "pnpm@10.6.3",
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.1",
@@ -22,11 +32,14 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/adm-zip": "^0.5.7",
     "@types/node": "^22.13.10",
     "rimraf": "^6.0.1",
     "rollup": "^4.35.0",
     "rollup-plugin-typescript2": "^0.36.0",
+    "semantic-release": "^24.2.3",
     "vitest": "^3.0.8"
   },
   "pnpm": {

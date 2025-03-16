@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 确保有写入权限
+      packages: write # 如果你也在发布包的话
+      pull-requests: write # 如果需要处理 PR 相关的事情
+    steps:
+      - name: download codes
+        uses: actions/checkout@v4
+
+      - name: install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: install dependencies
+        run: pnpm install
+
+      # - name: run unit tests
+      #   run: pnpm test
+
+      - name: build
+        run: pnpm build
+
+      - name: run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm run release
